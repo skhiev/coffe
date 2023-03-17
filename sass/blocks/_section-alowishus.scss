@@ -1,0 +1,88 @@
+.alowishus {
+  position: relative;
+  padding-top: 150px;
+}
+
+.alowishus__img {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.alowishus-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.alowishus-text {
+  max-width: 604px;
+  padding-top: 24px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  text-align: center;
+  margin: 0 auto;
+
+  color: #64646a;
+}
+
+.alowishus-text p + p {
+  padding-top: 1rem;
+}
+
+.alowishus-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 90px;
+}
+
+.alowishus-cards__card {
+  max-width: 393px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background: linear-gradient(
+    152.09deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: drop-shadow(0px 30px 60px rgba(163, 168, 179, 0.15));
+  border-radius: 24px;
+}
+
+.alowishus-cards__card-text {
+  max-width: 316px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+
+  color: #64646a;
+}
+
+.alowishus-cards__card-img {
+  display: block;
+  margin: 60px auto;
+}
+
+.card__btn {
+  align-self: center;
+}
+
+@media (max-width: 1230px) {
+  .alowishus-cards {
+    justify-content: center;
+    gap: 30px;
+  }
+  .alowishus-cards__card:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .alowishus-cards__card:first-child {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+.instant {
+  padding-top: 200px;
+  position: relative;
+}
+
+.instant-img__left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.instant-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .instant-wrapper {
+    flex-direction: column;
+  }
+  .order-content {
+    max-width: 95%;
+    text-align: center;
+    z-index: 2;
+  }
+}

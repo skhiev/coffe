@@ -1,0 +1,85 @@
+.title-1 {
+  font-weight: 800;
+  font-size: 124px;
+  line-height: 1.1;
+  color: #1b1b1d;
+}
+
+.title-1::before {
+  content: "";
+  top: 325px;
+  right: 40px;
+  position: absolute;
+  width: 73px;
+  height: 58px;
+
+  background-image: url("./../../img/prize.png");
+}
+
+.title-2 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1.1;
+
+  color: #1b1b1d;
+}
+
+.title-3 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.1;
+
+  color: #1b1b1d;
+}
+
+.title-4 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.1;
+
+  color: #1b1b1d;
+}
+
+.footer__title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 50px;
+
+  color: #1b1b1d;
+}
+
+@media (max-width: 1000px) {
+  .title-1 {
+    font-size: 100px;
+  }
+  .title-1::before {
+    top: 255px;
+    right: 110px;
+  }
+  .title-2 {
+    font-size: 50px;
+  }
+  .footer__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title-1 {
+    font-size: 60px;
+  }
+  .title-1::before {
+    width: 53px;
+    height: 38px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    top: 150px;
+    right: 0;
+    left: 220px;
+  }
+  .title-4 {
+    font-size: 30px;
+  }
+}

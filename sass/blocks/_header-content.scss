@@ -1,0 +1,151 @@
+.header-column {
+  position: relative;
+  margin-top: 100px;
+  padding-bottom: 131px;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 530px;
+}
+
+.header-content__text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-top: 30px;
+
+  color: #64646a;
+}
+
+.header-content__text p + p {
+  padding-top: 1rem;
+}
+
+.title-1 img {
+  vertical-align: inherit;
+}
+
+.header-content__button {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.btn-shop {
+  color: #1b1b1d;
+  border-bottom: 1px solid #1b1b1d;
+}
+.header-img {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  max-width: unset;
+  flex-grow: 1;
+}
+
+.header-img::after {
+  content: "";
+  top: 0;
+  right: 40px;
+  position: absolute;
+  width: 144px;
+  height: 113px;
+
+  background-image: url("./../../img/prize-big.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-img__stars {
+  position: absolute;
+  top: 391px;
+  left: 0;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 20px 24px;
+}
+
+.header-img__stars p {
+  display: block;
+  margin-top: 12px;
+  max-width: 232px;
+}
+
+@media (max-width: 1170px) {
+  .header-img__stars {
+    top: 491px;
+    left: 100px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header-img__stars {
+    top: 491px;
+    left: 350px;
+  }
+  .header-content__text {
+    font-size: 20px;
+    max-width: 420px;
+  }
+}
+@media (max-width: 820px) {
+  .header-column {
+    display: flex;
+    margin-top: 0;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .header-img {
+    position: relative;
+  }
+  .header-img__stars {
+    top: 491px;
+    left: 0;
+  }
+}
+@media (max-width: 650px) {
+  .header-img__stars {
+    top: 350px;
+    left: -20px;
+  }
+}
+@media (max-width: 600px) {
+  .header-img__stars {
+    top: 250px;
+    left: -20px;
+    border-radius: 14px;
+    padding: 10px 12px;
+  }
+
+  .header-img__stars p {
+    max-width: 170px;
+    font-size: 12px;
+  }
+  .header-img__stars img {
+    max-width: 100px;
+  }
+  .header-img::after {
+    width: 73px;
+    height: 58px;
+    top: 0;
+    right: 0;
+    left: -20px;
+  }
+  .header-content__button a {
+    font-size: 14px;
+  }
+  .header-content__text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-column {
+    row-gap: 80px;
+    padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,179 @@
+.header {
+  background-color: #eeeff1;
+  overflow: hidden;
+  min-height: 1040px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 40px;
+
+  padding: 24px 0;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 40px;
+  row-gap: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.link {
+  color: #1b1b1d;
+}
+
+.nav__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.btn-basket {
+  padding: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.btn-black {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #1b1b1d;
+  box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+  border-radius: 63px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.btn-black a {
+  color: inherit;
+}
+
+.nav__toggle {
+  display: none;
+}
+
+/* Menu Icon */
+
+.menu-icon-wrapper {
+  --time: 0.1s;
+  --width: 30px;
+  --height: 30px;
+  --line-height: 4px;
+  --color: #000;
+
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  left: 0;
+
+  width: var(--width);
+  height: var(--line-height);
+
+  background-color: var(--color);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.menu-icon::before {
+  top: calc(var(--line-height) * -2);
+}
+
+.menu-icon::after {
+  top: calc(var(--line-height) * 2);
+}
+
+.menu-icon.menu-icon--active {
+  background-color: transparent;
+}
+
+.menu-icon.menu-icon--active::before,
+.menu-icon.menu-icon--active::after {
+  top: 0;
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.menu-icon.menu-icon--active::before {
+  transform: rotate(45deg);
+}
+
+.menu-icon.menu-icon--active::after {
+  transform: rotate(-45deg);
+}
+
+//-------------
+
+@media (max-width: 1000px) {
+  .nav__button .btn-black,
+  .nav__menu {
+    display: none;
+  }
+  .nav__toggle {
+    display: block;
+  }
+  .nav__button {
+    column-gap: 20px;
+  }
+  .header {
+    min-height: auto;
+  }
+
+  .nav--mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    background: #fff;
+  }
+
+  .nav--mobile .nav__menu {
+    display: flex;
+    font-size: 30px;
+    row-gap: 40px;
+  }
+  .nav--mobile .nav__list {
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .nav--mobile .nav__button {
+    flex-direction: row;
+  }
+  .nav--mobile .btn-basket {
+    border: 1px solid #000;
+  }
+}
